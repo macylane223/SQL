@@ -1,0 +1,20 @@
+#This project analyzes data from a superstore:
+
+#First, I ordered all items by price.
+SELECT(price)
+FROM superstore
+ORDER BY price ASC;
+
+#Then, I added all of the prices of the items together.
+SELECT SUM(price)
+FROM superstore;
+
+#Next, I averaged the price of all kitchen supply items.
+SELECT AVG(price)
+FROM superstore
+WHERE category="Kitchen Supplies";
+
+#Lastly, I answered the question of how many electronics are in stock.
+SELECT SUM(stock_quantity)
+FROM superstore
+WHERE category="Electronics";
